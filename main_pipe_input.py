@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from NewPipe_Spool import newpipedialog
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -151,7 +151,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.Reset_pushButton.clicked.connect(self.resetfilter_clicked)
 
     def newpipe_spoolentry_clicked(self):
-        print(4)
+        self.Newpipedialog = newpipedialog()
+        result = self.Newpipedialog.exec()
 
     def resetfilter_clicked(self):
         print("fuck you")
